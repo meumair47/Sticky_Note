@@ -1,0 +1,151 @@
+:root {
+  --clr-primary: #2962ff;
+  --clr-primary-hover: #0d47a1;
+  --clr-gray-med: #78909c;
+  --clr-gray-light: #cfd8dc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 2em;
+  font-family: "open sans", sans-serif;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--clr-gray-light);
+}
+.main-input {
+  width: 250px;
+  height: 43px;
+  padding-top: 5px;
+  font-size: 1.2em;
+}
+
+.btn-add,
+.btn-remove {
+  width: 6em;
+  height: 2em;
+  font-size: 1.5em;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  cursor: pointer;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
+  border-radius: 0.2em;
+  outline: none;
+  transition: all 100ms ease-in;
+}
+.btn-add:active,
+.btn-remove:active,
+.btn-add:hover,
+.btn-remove:hover {
+  background-color: var(--clr-primary-hover);
+}
+main {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+.div-shadow {
+  display: block;
+  flex-wrap: wrap;
+  width: 25em;
+  height: auto; 
+  transition: all 100ms ease-in-out;
+  margin: 0 1em 1em 0;
+  box-shadow: 0px 0px 10px var(--clr-gray-med);
+  padding: 6px; 
+  overflow: hidden;
+}
+#div-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2em 0em;
+}
+.div-shadow:hover {
+  transform: scale(1.05);
+}
+.inner-heading {
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgb(53, 88, 88);
+  color: white;
+}
+.inner-btn {
+  margin-left: 10px;
+  width: 6em;
+  height: 2.2em;
+  font-size: 0.7em;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  cursor: pointer;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
+  border-radius: 0.2em;
+  outline: none;
+  margin-top: 10px;
+  padding: 3px;
+  transition: all 100ms ease-in;
+}
+.inner-remove-btn {
+  margin-left: 10px;
+  width: 6em;
+  height: 2.2em;
+  font-size: 0.7em;
+  border: none;
+  background-color: var(--clr-primary);
+  color: white;
+  cursor: pointer;
+  font-family: "open sans", sans-serif;
+  font-weight: bold;
+  border-radius: 0.2em;
+  outline: none;
+  margin-top: 10px;
+  padding: 3px;
+  transition: all 100ms ease-in;
+}
+.inputText {
+  margin-left: 6px;
+  width: 55%;
+  height: 30px;
+}
+.inner-text {
+  margin-left: 20px;
+  margin-top: 20px;
+  overflow-wrap: break-word; 
+  word-break: break-all; 
+}
+@media (max-width: 768px) {
+  header,
+  #div-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-add,
+  .btn-remove {
+    margin-top: 10px;
+    width: 120px;
+  }
+
+  .div-shadow {
+    max-width: 97%;
+  }
+  main {
+    padding-left: 0;
+  }
+  .inner-remove-btn {
+    width: 50px;
+  }
+  .inner-btn {
+    width: 50px;
+  }
+}
